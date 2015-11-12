@@ -1,32 +1,29 @@
-<link rel="import" href="../polymer/polymer.html">
-<!-- Todo: Add your Polymer Element Imports here: -->
-
+<link rel="import" href="elements.html">
 
 <dom-module id="socobo-element-template">
-  <style>
-    :host {
-      display: block;
-    }
-  </style>
-
   <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
     <div>Hello from <span>{{socobo}}</span></div>
   </template>
 
+  <script>
+    (function() {
+      Polymer({
+        is: 'socobo-element-template',
+
+        properties: {
+          socobo: {
+            type: String,
+            value: 'socobo-template-element',
+            notify: true
+          }
+        }
+      });
+    })();
+  </script>
 </dom-module>
-
-<script>
-(function() {
-  Polymer({
-    is: 'socobo-element-template',
-
-    properties: {
-      socobo: {
-        type: String,
-        value: 'socobo-template-element',
-        notify: true
-      }
-    }
-  });
-})();
-</script>
